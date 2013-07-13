@@ -1,0 +1,10 @@
+app/code/local/MobWeb/UpsellCategory app/code/local/MobWeb/UpsellCategory/
+
+app/etc/modules/MobWeb_UpsellCategory.xml 
+app/etc/modules/MobWeb_UpsellCategory.xml
+
+app/design/frontend/base/default/layout/MobWeb_UpsellCategory.xml 
+app/design/frontend/base/default/layout/MobWeb_UpsellCategory.xml
+
+# Clear the cache
+@shell   rm -rf $PROJECT/var/cache/* && echo "Magento Cache cleared"
