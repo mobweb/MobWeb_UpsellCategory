@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config> 
+    <modules>
+        <MobWeb_UpsellCategory>
+            <version>0.0.1</version>
+        </MobWeb_UpsellCategory>
+    </modules>
+    <global>
+        <blocks>
+            <mobwebupsellcategory>
+                <class>MobWeb_UpsellCategory_Block</class>
+            </mobwebupsellcategory>
+        </blocks>
+        <models>
+            <upsellcategory>
+                <class>MobWeb_UpsellCategory_Model</class>
+            </upsellcategory>
+        </models>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <MobWeb_UpsellCategory>
+                    <file>MobWeb_UpsellCategory.xml</file>
+                </MobWeb_UpsellCategory>
+            </updates>
+        </layout>
+    </frontend>
+</config>

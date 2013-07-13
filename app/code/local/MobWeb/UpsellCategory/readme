@@ -1,0 +1,11 @@
+Add the following code to the "Custom Layout Update" field on the "Custom Design" tab of any category where you want to replace upsell block with the custom block:
+
+<!-- Replace "upsell_products" with a custom block -->
+<block type="mobwebupsellcategory/product_list_upsell" name="product.info.upsellcategory" as="upsell_products" template="catalog/product/list/upsell.phtml" after="product.info.upsell">
+	<action method="setColumnCount"><columns>4</columns></action>
+	<action method="setItemLimit"><type>upsell</type><limit>4</limit></action>
+</block>
+
+Hint: You may also just enter the code once in the parent category, and then activate "Use Parent Category" settings in the relevant child categories, also on the "Custom Design" tab.
+
+Or, if you want to apply the update to all categories, remove the two relevant lines from app/design/frontend/base/default/layout/upsellcategory.xml
