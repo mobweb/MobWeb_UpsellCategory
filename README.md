@@ -1,6 +1,6 @@
 # MobWeb_UpsellCategory extension for Magento
 
-This extension replaces the `upsell_products` block on the product detail page with a block that presents products from a sibling category.
+This extension replaces the `upsell_products` block on the product detail page with a block that presents products from the current product's category or optionally also the current product's sibling categories.
 
 Let's assume you have the following category setup:
 
@@ -11,11 +11,19 @@ Let's assume you have the following category setup:
 			* Shoes
 			* Jeans
 
-When viewing a product from the category `Shoes`, the custom block will display random products from the `Shirts` and `Jeans` categories.
+When viewing a product from the category `Shoes`, the custom block will display random products from the `Shoes` category. Optionally, it can also display products from the `Shirts` and `Jeans` categories.
 
 ## Installation
 
-Install using [colinmollenhour/modman](https://github.com/colinmollenhour/modman/).
+Download & install using [colinmollenhour/modman](https://github.com/colinmollenhour/modman/). Or directly via git, using [jreinke/modgit](https://github.com/jreinke/modgit).
+
+## Configuration
+
+To enable displaying of sibling categories' products, set the first argument of the call to `$product->getUpSellProductCollection()` in `Upsell.php` to `true`.
+
+## Notice
+
+Since a product can be assigned to multiple categories, this extension relies on the current environment of the viewed product to determined its related "upsell" products. So for example if you have a product visible at `/shoes/some-shoe.html`, it will display different "upsell" products if it's viewed directly at `/some-shoe.html`.
 
 ## Questions? Need help?
 

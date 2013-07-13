@@ -6,8 +6,12 @@ class MobWeb_UpsellCategory_Model_Product extends Mage_Catalog_Model_Product
         // Get a reference to the current product
         $product = Mage::registry('product');
 
-        // Get the product's category
-        $category = $product->getCategory();
+        // Get the product's parent categories
+        $categories = $product->getCategoryCollection()->addAttributeToSelect('*');
+
+        // Get the "last" category from the category collection, the current
+        // product's immediate parent category
+        $category = $categories->getLastItem();
 
         // If we also want to display products from sibling categories,
         // get a list of these
