@@ -34,13 +34,16 @@ class MobWeb_UpsellCategory_Model_Product extends Mage_Catalog_Model_Product
 
         // Now create a collection that contains all of the category's
         // products
-        //@TODO: Only show products that are not out of stock and are active
         $category_products = Mage::getModel('catalog/product')->getCollection()->addFieldToFilter('entity_id', $category_product_ids);
 
         // Specify the required attributes
         $category_products->addAttributeToSelect('name');
         $category_products->addAttributeToSelect('price');
         $category_products->addAttributeToSelect('small_image');
+
+        // Only load enabled and visible products
+        $category_products->addFieldToFilter('status', Mage_Catalog_Model_Product_Status::STATUS_ENABLED);
+        $category_products->addAttributeToFilter('visibility', 4);
 
         // Set the limit
         $limit = $this->getData('product_limit');
