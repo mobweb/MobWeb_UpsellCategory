@@ -3,7 +3,7 @@
     <modules>
         <MobWeb_UpsellCategory>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
             <depends />
         </MobWeb_UpsellCategory>
     </modules>

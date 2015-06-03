@@ -1,4 +1,4 @@
-app/code/local/MobWeb/UpsellCategory app/code/local/MobWeb/UpsellCategory/
+app/code/community/MobWeb/UpsellCategory app/code/community/MobWeb/UpsellCategory/
 
 app/etc/modules/MobWeb_UpsellCategory.xml app/etc/modules/MobWeb_UpsellCategory.xml
 
